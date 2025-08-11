@@ -17,15 +17,17 @@ export default function Home() {
 
         <Link href="/posts" passHref>
           <button
-            className="w-36 h-36 bg-black text-white border-2 border-black
-                       flex flex-col items-center justify-center px-4
-                       font-semibold shadow-md transition duration-300 ease-in-out
-                       hover:bg-sky-400 hover:text-black hover:scale-105 hover:shadow-lg"
-            aria-label="View Posts"
-            style={{ borderRadius: '50%', lineHeight: '1.1' }}
-          >
-            View<br />Posts
-          </button>
+  className="w-36 h-36 bg-black text-white border-2 border-black
+             flex flex-col items-center justify-center px-4
+             font-semibold shadow-md transition duration-300 ease-in-out
+             hover:bg-sky-400 hover:text-black hover:scale-105 hover:shadow-lg
+             mb-12"   // <-- Add this
+  aria-label="View Posts"
+  style={{ borderRadius: '50%', lineHeight: '1.1' }}
+>
+  View<br />Posts
+</button>
+
         </Link>
       </div>
 
