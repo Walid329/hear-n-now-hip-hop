@@ -14,7 +14,7 @@ export const metadata = {
   openGraph: {
     title: "Hear n' Now Hip-Hop",
     description: 'With Howie and Mickies!',
-    url: 'https://hear-n-now-hip-hop.vercel.app', // replace with your live URL
+    url: 'https://hear-n-now-hip-hop.vercel.app',
     images: [
       {
         url: '/images/imessage-preview.png',
