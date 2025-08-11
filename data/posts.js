@@ -11,7 +11,7 @@ export const posts = [
     link: 'https://open.spotify.com/episode/6ycOKAHXrz3QhBKrAehh4H'
   },
   {
-    id: 2,
+    id: 3,
     type: 'video',
     title: 'Tyler, The Creator - LUMBERJACK (Live on the Call Me If You Get Lost Tour - Minneapolis)',
     description: "An awesome opening to Tyler's stop at the Target Center in Minneapolis, MN.",
@@ -22,11 +22,11 @@ export const posts = [
     link: 'https://www.youtube.com/watch?v=2Oq8T1BsKrU'
   },
   {
-    id: 3,
+    id: 2,
     type: 'playlist',
     title: "Hn'NHH EP.01: Songs from the Show",
     description: "Songs used in the original radio-airing of Hear n' Now Hip-Hop Ep.01 'Regional Deep Dive: Twin Cities,' with Mickies and Howie.",
-    date: '2024-04-08',
+    date: '2021-04-08',
     duration: '9 tracks',
     thumbnail: '/images/thumbnail.png',
     embed: 'https://open.spotify.com/embed/playlist/6ZlzprWCfkY0zC2X1sdNfA?utm_source=generator',

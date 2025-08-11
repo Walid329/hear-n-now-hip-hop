@@ -11,7 +11,7 @@ export default function PostsPage() {
     : posts.filter(post => post.type === filter);
 
   return (
-    <div className="min-h-screen bg-[#FDD9B7] text-black font-['Gentium Book Basic', serif]">
+    <div className="min-h-screen bg-[#FDD9B7] text-black font-['Gentium Book Basic', serif] flex flex-col">
       {/* Header */}
       <header className="bg-black text-white py-6 px-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
@@ -22,29 +22,31 @@ export default function PostsPage() {
         </div>
       </header>
 
-      <div className="max-w-6xl mx-auto py-8 px-4">
+      {/* Main content wrapper to add padding & spacing */}
+      <main className="flex-grow max-w-6xl mx-auto px-4 py-8 w-full">
         {/* Filter Buttons */}
-        <div className="flex justify-center mb-8 gap-4">
-          {['all', 'podcast', 'video', 'playlist'].map(type => (
-            <button
-              key={type}
-              onClick={() => setFilter(type)}
-              className={`px-6 py-3 rounded-full font-semibold transition duration-300 ${
-                filter === type
-                  ? 'bg-black text-white'
-                  : 'bg-white text-black border-2 border-black hover:bg-black hover:text-white'
-              }`}
-            >
-              {type === 'all'
-                ? 'All Posts'
-                : type === 'podcast'
-                ? '🎧 Podcasts'
-                : type === 'video'
-                ? '📹 Videos'
-                : '🎵 Playlists'}
-            </button>
-          ))}
-        </div>
+<div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-lg mx-auto mb-8">
+  {['all', 'podcast', 'video', 'playlist'].map(type => (
+    <button
+      key={type}
+      onClick={() => setFilter(type)}
+      className={`px-6 py-3 rounded-full font-semibold transition duration-300 ${
+        filter === type
+          ? 'bg-black text-white'
+          : 'bg-white text-black border-2 border-black hover:bg-black hover:text-white'
+      }`}
+    >
+      {type === 'all'
+        ? 'All Posts'
+        : type === 'podcast'
+        ? '🎧 Podcasts'
+        : type === 'video'
+        ? '📹 Videos'
+        : '🎵 Playlists'}
+    </button>
+  ))}
+</div>
+
 
         {/* Posts Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -89,7 +91,7 @@ export default function PostsPage() {
                     {new Date(post.date).toLocaleDateString('en-US', {
                       month: 'short',
                       day: 'numeric',
-                      year: 'numeric'
+                      year: 'numeric',
                     })}
                   </span>
                   <a
@@ -117,7 +119,7 @@ export default function PostsPage() {
             <p className="text-xl text-gray-600">No {filter} posts found.</p>
           </div>
         )}
-      </div>
+      </main>
     </div>
   );
 }
