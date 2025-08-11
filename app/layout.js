@@ -1,34 +1,42 @@
 import './globals.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Head from 'next/head';
+
+export const metadata = {
+  title: "Hear n' Now Hip-Hop",
+  description: 'With Howie and Mickies!',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
+  themeColor: '#ffffff',
+  manifest: '/site.webmanifest',
+  openGraph: {
+    title: "Hear n' Now Hip-Hop",
+    description: 'With Howie and Mickies!',
+    url: 'https://hear-n-now-hip-hop.vercel.app', // replace with your live URL
+    images: [
+      {
+        url: '/images/imessage-preview.png',
+        width: 1200,
+        height: 630,
+        alt: 'Hear n Now Hip-Hop Preview',
+      },
+    ],
+    siteName: "Hear n' Now Hip-Hop",
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Hear n' Now Hip-Hop",
+    description: 'With Howie and Mickies!',
+    images: ['/images/imessage-preview.png'],
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        {/* Favicons */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
-
-        {/* Open Graph for social previews (Facebook, iMessage, etc) */}
-        <meta property="og:title" content="Hear n' Now Hip-Hop" />
-        <meta property="og:description" content="With Howie and Mickies!" />
-        <meta property="og:image" content="/images/imessage-preview.png" />
-        <meta property="og:type" content="website" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Hear n' Now Hip-Hop" />
-        <meta name="twitter:description" content="With Howie and Mickies!" />
-        <meta name="twitter:image" content="/images/imessage-preview.png" />
-      </Head>
-
       <body className="min-h-screen flex flex-col bg-[#FDD9B7] text-black font-['Gentium Book Basic', serif]">
         <Navbar />
         <main className="flex-grow">{children}</main>
